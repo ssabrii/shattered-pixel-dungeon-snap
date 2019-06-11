@@ -1,6 +1,6 @@
 addons:
-	snaps:
-		- name: http
+ snaps:
+  - name: http
 
 
 after_failure:
