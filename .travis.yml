@@ -1,4 +1,4 @@
-import: ssabrii/shattered-pixel-dungeon-snap/snap.yml
+import: ssabrii/shattered-pixel-dungeon-snap/build-config/snap.yml
 
 
 after_success:
