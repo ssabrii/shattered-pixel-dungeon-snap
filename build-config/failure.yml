@@ -1,0 +1,8 @@
+addons:
+	snaps:
+		- name: http
+
+
+after_failure:
+  - sudo journalctl -u snapd
+  - http https://api.snapcraft.io/v2/snaps/info/core architecture==amd64 Snap-Device-Series:16

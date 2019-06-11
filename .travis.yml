@@ -1,9 +1,10 @@
-import: ssabrii/shattered-pixel-dungeon-snap/build-config/snap.yml
+import: 
+ - ./snap.yml
+ # Import failure template as well
+ - ./failure.yml
 
 
 after_success:
   - cp *.snap "$(echo "$TRAVIS_REPO_SLUG" | sed -e 's|.*/\(.*\)|\1|')-pr$TRAVIS_PULL_REQUEST.snap"
   - timeout 180 /snap/bin/transfer "$(echo "$TRAVIS_REPO_SLUG" | sed -e 's|.*/\(.*\)|\1|')-pr$TRAVIS_PULL_REQUEST.snap"
-after_failure:
-  - sudo journalctl -u snapd
-  - http https://api.snapcraft.io/v2/snaps/info/core architecture==amd64 Snap-Device-Series:16
+
