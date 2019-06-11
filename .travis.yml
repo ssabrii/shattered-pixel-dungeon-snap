@@ -2,7 +2,8 @@ import:
  - source: ./build-config/snap.yml
    mode: deep_merge
  # Import failure template as well
- - ./build-config/failure.yml
+ - source: ./build-config/failure.yml
+   mode: deep_merge
 
 
 after_success:
