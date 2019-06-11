@@ -1,7 +1,7 @@
 import: 
- - ./snap.yml
+ - ./build-config/snap.yml
  # Import failure template as well
- - ./failure.yml
+ - ./build-config/failure.yml
 
 
 after_success:
